@@ -9,7 +9,7 @@ export function Navbar() {
         <p className="text-gray-300 text-2xl duration-200 hover:translate-x-3 pt-2 pl-2">ChatBot IO.</p>
       </Link>
       <div className="flex items-center space-x-4">
-        <Link href={"/"}><p className="text-gray-300 text-2xl duration-200 hover:translate-x-3">Contact.</p></Link>
+        <Link href={"/contact"}><p className="text-gray-300 text-2xl duration-200 hover:translate-x-3">Contact.</p></Link>
       </div>
     </div>
   )
