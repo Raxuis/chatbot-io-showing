@@ -1,5 +1,5 @@
 import { Navbar } from '@/components/Navbar'
-import { BackgroundGradientDemo } from '@/components/ui/BgGradientCustom'
+import { BackgroundGradientCustom } from '@/components/ui/BgGradientCustom'
 import React from 'react'
 
 const Contact = () => {
@@ -7,7 +7,7 @@ const Contact = () => {
     <div className="min-h-screen w-full">
       <div className='w-[80%] mx-auto pt-2'>
         <Navbar />
-        <BackgroundGradientDemo />
+        <BackgroundGradientCustom />
       </div>
     </div>
   )

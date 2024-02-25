@@ -5,8 +5,10 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Raphaël | Animation Project",
-  description: "Made by Raphaël a Junior French Developer",
+  title: "ChatBot IO | Project Showing",
+  description: "Made by Raphaël and Benoît",
+  keywords: "ChatBot, ChatBotIO, ChatBot.io",
+  icons: ["/robot.png"]
 };
 
 export default function RootLayout({

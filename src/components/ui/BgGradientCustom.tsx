@@ -4,7 +4,7 @@ import { BackgroundGradient } from "../ui/background-gradient";
 import Image from "next/image";
 import { GithubIcon, LinkedinIcon, TwitterIcon } from 'lucide-react';
 
-export function BackgroundGradientDemo() {
+export function BackgroundGradientCustom() {
 
 
   const entities = [
