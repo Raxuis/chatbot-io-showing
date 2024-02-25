@@ -3,35 +3,76 @@ import React from "react";
 import { BackgroundGradient } from "../ui/background-gradient";
 import Image from "next/image";
 
-export function BackgroundGradientDemo({ imageSrc }: { imageSrc: string }) {
-  return (
-    <div>
-      <BackgroundGradient className="rounded-[22px] max-w-sm p-4 sm:p-10 bg-white dark:bg-zinc-900">
-        <div className="flex justify-center">
-          <Image
-            src={imageSrc}
-            alt={imageSrc}
-            height="100"
-            width="100"
-            className="object-cover rounded-full h-20 w-20"
-          />
-        </div>
-        <p className="text-base sm:text-xl text-black mt-4 mb-2 dark:text-neutral-200">
-          Air Jordan 4 Retro Reimagined
-        </p>
+export function BackgroundGradientDemo() {
 
-        <p className="text-sm text-neutral-600 dark:text-neutral-400">
-          The Air Jordan 4 Retro Reimagined Bred will release on Saturday,
-          February 17, 2024. Your best opportunity to get these right now is by
-          entering raffles and waiting for the official releases.
-        </p>
-        <button className="rounded-full pl-4 pr-1 py-1 text-white flex items-center space-x-1 bg-black mt-4 text-xs font-bold dark:bg-zinc-800">
-          <span>Buy now </span>
-          <span className="bg-zinc-700 rounded-full text-[0.6rem] px-2 py-0 text-white">
-            $100
-          </span>
-        </button>
-      </BackgroundGradient>
+
+  const entities = [
+    {
+      name: 'Benoît',
+      avatar: '/participants/benoit.jpeg',
+      socials: [
+        {
+          name: 'Github',
+          url: 'https://github.com/BenoitPrmt',
+        },
+        {
+          name: 'LinkedIn',
+          url: 'https://www.linkedin.com/in/benoit-parmentier/',
+        },
+        {
+          name: 'Twitter',
+          url: 'https://twitter.com/BenoitDev_',
+        },
+      ]
+    },
+    {
+      name: 'Raphaël',
+      avatar: '/participants/edited-raph.jpg',
+      socials: [
+        {
+          name: 'Github',
+          url: 'https://github.com/Raxuis',
+        },
+        {
+          name: 'LinkedIn',
+          url: 'https://www.linkedin.com/in/raphael-raclot/',
+        },
+        {
+          name: 'Twitter',
+          url: 'https://twitter.com/I_Haruki_I',
+        },
+      ]
+    }];
+  return (
+    <div className="flex flex-wrap justify-center pt-24 gap-4">
+      {entities.map(entity => (
+        <BackgroundGradient className="rounded-[22px] max-w-sm p-4 sm:p-10 bg-white dark:bg-zinc-900" key={entity.name}>
+
+          <div className="flex justify-center">
+            <Image
+              src={entity.avatar}
+              alt={entity.name}
+              height="100"
+              width="100"
+              className="object-cover rounded-full h-20 w-20"
+            />
+          </div>
+          <p className="text-base sm:text-xl text-black mt-4 mb-2 dark:text-neutral-200">
+            {entity.name}
+          </p>
+
+          <p className="text-sm text-neutral-600 dark:text-neutral-400">
+            The Air Jordan 4 Retro Reimagined Bred will release on Saturday,
+            February 17, 2024. Your best opportunity to get these right now is by
+            entering raffles and waiting for the official releases.
+          </p>
+          <button className="rounded-full pl-4 pr-1 py-1 text-white flex items-center space-x-1 bg-black mt-4 text-xs font-bold dark:bg-zinc-800">
+            <span>Buy now </span>
+            <span className="bg-zinc-700 rounded-full text-[0.6rem] px-2 py-0 text-white">
+              $100
+            </span>
+          </button>
+        </BackgroundGradient>))}
     </div>
   );
 }
