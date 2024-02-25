@@ -63,7 +63,7 @@ export function BackgroundGradientCustom() {
               alt={entity.name}
               height="100"
               width="100"
-              className="object-cover rounded-full h-20 w-20"
+              className="object-cover rounded-full h-20 w-20 duration-500 hover:scale-110"
             />
           </div>
           <p className="text-base sm:text-xl text-black mt-4 mb-2 dark:text-neutral-200">
