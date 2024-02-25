@@ -29,7 +29,9 @@ export function BentoCustom() {
   );
 }
 const Skeleton = () => (
-  <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl   dark:bg-dot-white/[0.2] bg-dot-black/[0.2] [mask-image:radial-gradient(ellipse_at_center,white,transparent)]  border border-transparent dark:border-white/[0.2] bg-neutral-100 dark:bg-black"></div>
+  <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl   dark:bg-dot-white/[0.2] bg-dot-black/[0.2] [mask-image:radial-gradient(ellipse_at_center,white,transparent)]  border border-transparent dark:border-white/[0.2] bg-neutral-100 dark:bg-black">
+    <Image src="/dance.gif" alt="dance" width={100} height={100} className="flex-shrink-0 object-cover h-full w-full rounded-xl" />
+  </div>
 );
 
 const SkeletonOne = () => {
@@ -207,7 +209,7 @@ const SkeletonFour = () => {
           alt="avatar"
           height="100"
           width="100"
-          className="rounded-full h-10 w-10 object-none"
+          className="rounded-full h-10 w-10 object-cover"
         />
         <p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
           Our Bot
@@ -285,7 +287,7 @@ const SkeletonFive = () => {
         variants={variantsSecond}
         className="flex flex-row rounded-full border border-neutral-100 dark:border-white/[0.2] p-2 items-center justify-end space-x-2 w-3/4 ml-auto bg-white dark:bg-black"
       >
-        <p className="text-xs text-neutral-500">Oh noo 🥲</p>
+        <p className="text-xs text-neutral-500">Oh noo 🥲 </p>
         <div className="h-6 w-6 rounded-full bg-gradient-to-r from-pink-500 to-violet-500 flex-shrink-0" />
       </motion.div>
     </motion.div>
@@ -293,7 +295,7 @@ const SkeletonFive = () => {
 };
 const items = [
   {
-    title: "Message Setection",
+    title: "Message Detection",
     description: (
       <span className="text-sm">
         Our ChatBot detects what&apos;s been sent by the user.
@@ -315,13 +317,13 @@ const items = [
     icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
   },
   {
-    title: "Contextual Suggestions",
+    title: "Used Command Completion",
     description: (
       <span className="text-sm">
-        Get AI-powered suggestions based on your writing context.
+        Use arrow up to get last written command.
       </span>
     ),
-    header: <SkeletonThree />,
+    header: <Skeleton />,
     className: "md:col-span-1",
     icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
   },
