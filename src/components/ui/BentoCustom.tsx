@@ -1,6 +1,6 @@
 "use client";
 import { cn } from "@/lib/utils";
-import React, { useState } from "react";
+import React from "react";
 import { BentoGrid, BentoGridItem } from "./bento-grid";
 import {
   IconBoxAlignRightFilled,
@@ -266,7 +266,6 @@ const SkeletonFive = () => {
       },
     },
   };
-  const [result] = useState(() => Math.random() < 0.5 ? 'heads' : 'tails');
   return (
     <motion.div
       initial="initial"
@@ -285,7 +284,7 @@ const SkeletonFive = () => {
           className="rounded-full h-10 w-10"
         />
         <p className="text-xs text-neutral-500">
-          🪙 You got <b>{result}</b>
+          🪙 You got <b>tails</b>
         </p>
       </motion.div>
       <motion.div
