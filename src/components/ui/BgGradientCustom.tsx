@@ -81,7 +81,7 @@ export function BackgroundGradientCustom() {
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="rounded-full px-2 py-2 duration-500 text-white hover:text-grey-links flex items-center space-x-1 bg-black text-xs font-bold dark:bg-zinc-800"
+                  className="rounded-full px-2 py-2 duration-500 text-white hover:text-greyLinks flex items-center space-x-1 bg-black text-xs font-bold dark:bg-zinc-800"
                 >
                   {React.createElement(social.icon, { className: "w-4 h-4" })}
                   <span className="text-xs">{social.name}</span>

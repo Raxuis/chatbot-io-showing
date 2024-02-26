@@ -21,6 +21,9 @@ module.exports = {
           },
         },
       },
+      colors: {
+        greyLinks: "#8c7c98",
+      },
     },
   },
   plugins: [addVariablesForColors],
