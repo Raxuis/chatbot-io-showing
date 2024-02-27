@@ -11,7 +11,7 @@ export function BackgroundGradientCustom() {
     {
       name: 'Benoît',
       avatar: '/participants/benoit.jpeg',
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque fuga deserunt ut nulla unde sapiente explicabo veniam repellat facere omnis similique ratione quis distinctio, id, magnam inventore eius excepturi placeat. Autem sint totam labore eum nulla hic libero illum.',
+      description: 'He\'s a passionate programmer who excels particularly in Python, JavaScript, and PHP languages. Using them, he creates innovative and functional projects. Outside coding, he explores creativity through his camera, capturing unique moments and telling visual stories.',
       socials: [
         {
           name: 'Github',
@@ -55,7 +55,7 @@ export function BackgroundGradientCustom() {
   return (
     <div className="flex flex-wrap justify-center pt-24 gap-8">
       {entities.map(entity => (
-        <BackgroundGradient className="rounded-[22px] max-w-sm p-4 sm:p-10 bg-zinc-900 h-[100%]" key={entity.name}>
+        <BackgroundGradient className="rounded-[22px] max-w-sm p-4 sm:p-10 bg-zinc-900 h-full" key={entity.name}>
 
           <div className="flex justify-center">
             <Image
@@ -74,7 +74,7 @@ export function BackgroundGradientCustom() {
             {entity.description}
           </p>
           <div className="flex justify-center space-x-4">
-            <button className="rounded-full px-4 py-1 text-white flex items-center space-x-1  mt-4 text-xs font-bold bg-zinc-800">
+            <button className="rounded-full px-4 py-1 text-white flex items-center space-x-1 mt-4 text-xs font-bold bg-zinc-800">
               {entity.socials.map(social => (
                 <a
                   key={social.name}
