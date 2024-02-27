@@ -55,7 +55,7 @@ export function BackgroundGradientCustom() {
   return (
     <div className="flex flex-wrap justify-center pt-24 gap-8">
       {entities.map(entity => (
-        <BackgroundGradient className="rounded-[22px] max-w-sm p-4 sm:p-10 bg-white dark:bg-zinc-900 h-[100%]" key={entity.name}>
+        <BackgroundGradient className="rounded-[22px] max-w-sm p-4 sm:p-10 bg-zinc-900 h-[100%]" key={entity.name}>
 
           <div className="flex justify-center">
             <Image
@@ -66,22 +66,22 @@ export function BackgroundGradientCustom() {
               className="object-cover rounded-full h-20 w-20 duration-500 hover:scale-110"
             />
           </div>
-          <p className="text-base sm:text-xl text-black mt-4 mb-2 dark:text-neutral-200">
+          <p className="text-base sm:text-xl mt-4 mb-2 text-neutral-200">
             {entity.name}
           </p>
 
-          <p className="text-sm text-neutral-600 dark:text-neutral-400">
+          <p className="text-sm text-neutral-400">
             {entity.description}
           </p>
           <div className="flex justify-center space-x-4">
-            <button className="rounded-full px-4 py-1 text-white flex items-center space-x-1 bg-black mt-4 text-xs font-bold dark:bg-zinc-800">
+            <button className="rounded-full px-4 py-1 text-white flex items-center space-x-1  mt-4 text-xs font-bold bg-zinc-800">
               {entity.socials.map(social => (
                 <a
                   key={social.name}
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="rounded-full px-2 py-2 duration-500 text-white hover:text-greyLinks flex items-center space-x-1 bg-black text-xs font-bold dark:bg-zinc-800"
+                  className="rounded-full px-2 py-2 duration-500 text-white hover:text-greyLinks flex items-center space-x-1 text-xs font-bold bg-zinc-800"
                 >
                   {React.createElement(social.icon, { className: "w-4 h-4" })}
                   <span className="text-xs">{social.name}</span>
