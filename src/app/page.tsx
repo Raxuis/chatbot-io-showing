@@ -7,7 +7,7 @@ export default function Home() {
       <div className='w-[80%] mx-auto pt-2'>
         <Navbar />
         <BentoCustom />
-        <hr className='mt-24 mb-12 w-[80%] mx-auto text-grey-links' />
+        <hr className='mt-24 mb-12 w-[80%] mx-auto opacity-20' />
         <InfiniteMovingCardsCustom />
       </div>
     </div>
