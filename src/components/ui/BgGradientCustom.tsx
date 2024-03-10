@@ -2,6 +2,7 @@
 import React from "react";
 import { BackgroundGradient } from "../ui/background-gradient";
 import Image from "next/image";
+import { motion } from "framer-motion";
 import { GithubIcon, LinkedinIcon, TwitterIcon } from 'lucide-react';
 
 export function BackgroundGradientCustom() {
@@ -58,13 +59,19 @@ export function BackgroundGradientCustom() {
         <BackgroundGradient className="rounded-[22px] max-w-sm p-4 sm:p-10 bg-zinc-900 h-full" key={entity.name}>
 
           <div className="flex justify-center">
-            <Image
-              src={entity.avatar}
-              alt={entity.name}
-              height="100"
-              width="100"
-              className="object-cover rounded-full h-20 w-20 duration-500 hover:scale-110"
-            />
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.3 }}
+              className="flex justify-center"
+            >
+              <Image
+                src={entity.avatar}
+                alt={entity.name}
+                height="100"
+                width="100"
+                className="object-cover rounded-full h-20 w-20"
+              />
+            </motion.div>
           </div>
           <p className="text-base sm:text-xl mt-4 mb-2 text-neutral-200">
             {entity.name}
