@@ -3,11 +3,11 @@ import { cn } from "@/lib/utils";
 import React from "react";
 import { BentoGrid, BentoGridItem } from "./bento-grid";
 import {
-  IconBoxAlignRightFilled,
-  IconClipboardCopy,
-  IconFileBroken,
-  IconSignature,
-  IconTableColumn,
+  IconBrandTeams,
+  IconUserSearch,
+  IconMailFast,
+  IconMessages,
+  IconArrowUp
 } from "@tabler/icons-react";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -303,7 +303,7 @@ const items = [
     ),
     header: <SkeletonOne />,
     className: "md:col-span-1",
-    icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
+    icon: <IconUserSearch className="h-4 w-4 text-neutral-500" />,
   },
   {
     title: "Fast Answers",
@@ -314,7 +314,7 @@ const items = [
     ),
     header: <SkeletonTwo />,
     className: "md:col-span-1",
-    icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
+    icon: <IconMailFast className="h-4 w-4 text-neutral-500" />,
   },
   {
     title: "Used Command Completion",
@@ -325,7 +325,7 @@ const items = [
     ),
     header: <Skeleton />,
     className: "md:col-span-1",
-    icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
+    icon: <IconArrowUp className="h-4 w-4 text-neutral-500" />,
   },
   {
     title: "Our Team",
@@ -336,7 +336,7 @@ const items = [
     ),
     header: <SkeletonFour />,
     className: "md:col-span-2",
-    icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
+    icon: <IconBrandTeams className="h-4 w-4 text-neutral-500" />,
   },
 
   {
@@ -348,6 +348,6 @@ const items = [
     ),
     header: <SkeletonFive />,
     className: "md:col-span-1",
-    icon: <IconBoxAlignRightFilled className="h-4 w-4 text-neutral-500" />,
+    icon: <IconMessages className="h-4 w-4 text-neutral-500" />,
   },
 ];
