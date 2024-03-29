@@ -262,6 +262,9 @@ const SkeletonFive = () => {
       },
     },
   };
+  const headsOrTails = Math.random() > 0.5 ? "heads" : "tails";
+  const answer = headsOrTails === "heads" ? "Oh noo 😢" : "Yeah! 😃";
+
   return (
     <motion.div
       initial="initial"
@@ -280,14 +283,16 @@ const SkeletonFive = () => {
           className="rounded-full h-10 w-10"
         />
         <p className="text-xs text-neutral-500">
-          🪙 You got <b>tails</b>
+          🪙 You got <b>{headsOrTails}</b>
         </p>
       </motion.div>
       <motion.div
         variants={variantsSecond}
         className="flex flex-row rounded-full border border-white/[0.2] p-2 items-center justify-end space-x-2 w-3/4 ml-auto bg-black"
       >
-        <p className="text-xs text-neutral-500">Oh noo 🥲 </p>
+        <p className="text-xs text-neutral-500">
+          {answer}
+        </p>
         <div className="h-6 w-6 rounded-full bg-gradient-to-r from-pink-500 to-violet-500 flex-shrink-0" />
       </motion.div>
     </motion.div>
