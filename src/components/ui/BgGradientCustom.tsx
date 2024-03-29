@@ -56,14 +56,14 @@ export function BackgroundGradientCustom() {
   return (
     <div className="flex flex-wrap justify-center pt-24 gap-8">
       {entities.map(entity => (
-        <BackgroundGradient className="rounded-[22px] max-w-sm p-4 sm:p-10 bg-zinc-900 h-full" key={entity.name}>
+        <motion.div key={entity.name}
+          whileHover={{ scale: 1.01 }}
+          transition={{ duration: 0.3 }}
+          className="flex justify-center"
+        >
+          <BackgroundGradient className="rounded-[22px] max-w-sm p-4 sm:p-10 bg-zinc-900 h-full">
 
-          <div className="flex justify-center">
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.3 }}
-              className="flex justify-center"
-            >
+            <div className="flex justify-center">
               <Image
                 src={entity.avatar}
                 alt={entity.name}
@@ -71,32 +71,33 @@ export function BackgroundGradientCustom() {
                 width="100"
                 className="object-cover rounded-full h-20 w-20"
               />
-            </motion.div>
-          </div>
-          <p className="text-base sm:text-xl mt-4 mb-2 text-neutral-200">
-            {entity.name}
-          </p>
+            </div>
+            <p className="text-base sm:text-xl mt-4 mb-2 text-neutral-200">
+              {entity.name}
+            </p>
 
-          <p className="text-sm text-neutral-400">
-            {entity.description}
-          </p>
-          <div className="flex justify-center space-x-4">
-            <button className="rounded-full px-4 py-1 text-white flex items-center space-x-1 mt-4 text-xs font-bold bg-zinc-800">
-              {entity.socials.map(social => (
-                <a
-                  key={social.name}
-                  href={social.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="rounded-full px-2 py-2 duration-500 text-white hover:text-greyLinks flex items-center space-x-1 text-xs font-bold bg-zinc-800"
-                >
-                  {React.createElement(social.icon, { className: "w-4 h-4" })}
-                  <span className="text-xs">{social.name}</span>
-                </a>
-              ))}
-            </button>
-          </div>
-        </BackgroundGradient>))}
+            <p className="text-sm text-neutral-400">
+              {entity.description}
+            </p>
+            <div className="flex justify-center space-x-4">
+              <button className="rounded-full px-4 py-1 text-white flex items-center space-x-1 mt-4 text-xs font-bold bg-zinc-800">
+                {entity.socials.map(social => (
+                  <a
+                    key={social.name}
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="rounded-full px-2 py-2 duration-500 text-white hover:text-greyLinks flex items-center space-x-1 text-xs font-bold bg-zinc-800"
+                  >
+                    {React.createElement(social.icon, { className: "w-4 h-4" })}
+                    <span className="text-xs">{social.name}</span>
+                  </a>
+                ))}
+              </button>
+            </div>
+          </BackgroundGradient>
+        </motion.div>
+      ))}
     </div>
   );
 }
