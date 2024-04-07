@@ -30,7 +30,7 @@ export function BentoCustom() {
 }
 const Skeleton = () => (
   <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-dot-white/[0.2] [mask-image:radial-gradient(ellipse_at_center,white,transparent)]  border border-white/[0.2]bg-black">
-    <Image src="/dance.gif" alt="dance" width={100} height={100} className="flex-shrink-0 object-cover h-full w-full rounded-xl" />
+    <Image src="/dance.gif" unoptimized alt="dance" width={100} height={100} className="flex-shrink-0 object-cover h-full w-full rounded-xl" />
   </div>
 );
 
