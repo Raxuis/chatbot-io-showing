@@ -1,5 +1,5 @@
 import { Navbar } from '@/components/Navbar';
-import { BentoCustom } from '../components/ui/BentoCustom';
+import { BentoCustom } from '@/components/ui/BentoCustom';
 import { InfiniteMovingCardsCustom } from '@/components/ui/infiniteCardsCustom';
 export default function Home() {
   return (
